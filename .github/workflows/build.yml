@@ -14,7 +14,7 @@ env:
   OCTOPUS_FEATURE_BRANCH_ENVIRONMENT: Development
   OCTOPUS_RELEASE_CHANNEL: Release
   OCTOPUS_RELEASE_ENVIRONMENT: Staging  
-  OCTOPUS_SPACE: Integration-Flyway
+  OCTOPUS_SPACE: Default
   OCTOPUS_API_KEY: ${{ secrets.OCTOPUSSERVERAPIKEY }}
   OCTOPUS_URL: ${{ secrets.OCTOPUSSERVERURL }}
 
@@ -148,5 +148,6 @@ jobs:
           project: ${{ env.OCTOPUS_PROJECT_NAME }}
           release_number: ${{ steps.ReleaseNum.outputs.APP_VERSION }}
           environments: ${{ steps.ReleaseNum.outputs.OCTOPUS_ENVIRONMENT }}
+
 
 
